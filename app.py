@@ -14,7 +14,7 @@ def get_db_data():
         sslmode='require'
     )
     cur = conn.cursor()
-    cur.execute(f"SELECT * FROM {os.environ["POSTGRESQL_TABLE"]} LIMIT 1")
+    cur.execute(f'SELECT * FROM {os.environ["POSTGRESQL_TABLE"]} LIMIT 1')
     result = cur.fetchone()
     cur.close()
     conn.close()
